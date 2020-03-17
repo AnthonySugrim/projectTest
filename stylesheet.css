@@ -1,0 +1,16 @@
+.jumbotronImg {
+    background-image: url("assets/jumbotron.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+};
+
+.jumbotron {
+    height: 100vh;
+}
+
+.headerText {
+  color: #633ED5;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+};
