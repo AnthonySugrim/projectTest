@@ -14,7 +14,7 @@
       <a class="nav-link active" href="#">HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">SYMPTOM</a>
+      <a class="nav-link" href="#">SYMPTOMS</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">ABOUT</a>
@@ -28,10 +28,102 @@
   <div class="lead jumbotronBtn">
     <br>
 
-    <a class="btn btn-primary btn-lg" href="#" role="button">Check Recalls</a>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Advance Search</a>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Check All Recalls</a>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Check Related Symptoms</a>
   </div>
 </div>
+<div class="container" id="selectionCriteriaContainer">
+  <div class="row justify-content-center">
+  <div class="col-sm text-center" id="stateCriteria">
+    <select>
+      <option value="none" selected disabled hidden>Select an State</option> 
+      <option value="AL">Alabama</option>
+      <option value="AK">Alaska</option>
+      <option value="AZ">Arizona</option>
+      <option value="AR">Arkansas</option>
+      <option value="CA">California</option>
+      <option value="CO">Colorado</option>
+      <option value="CT">Connecticut</option>
+      <option value="DE">Delaware</option>
+      <option value="DC">District Of Columbia</option>
+      <option value="FL">Florida</option>
+      <option value="GA">Georgia</option>
+      <option value="HI">Hawaii</option>
+      <option value="ID">Idaho</option>
+      <option value="IL">Illinois</option>
+      <option value="IN">Indiana</option>
+      <option value="IA">Iowa</option>
+      <option value="KS">Kansas</option>
+      <option value="KY">Kentucky</option>
+      <option value="LA">Louisiana</option>
+      <option value="ME">Maine</option>
+      <option value="MD">Maryland</option>
+      <option value="MA">Massachusetts</option>
+      <option value="MI">Michigan</option>
+      <option value="MN">Minnesota</option>
+      <option value="MS">Mississippi</option>
+      <option value="MO">Missouri</option>
+      <option value="MT">Montana</option>
+      <option value="NE">Nebraska</option>
+      <option value="NV">Nevada</option>
+      <option value="NH">New Hampshire</option>
+      <option value="NJ">New Jersey</option>
+      <option value="NM">New Mexico</option>
+      <option value="NY">New York</option>
+      <option value="NC">North Carolina</option>
+      <option value="ND">North Dakota</option>
+      <option value="OH">Ohio</option>
+      <option value="OK">Oklahoma</option>
+      <option value="OR">Oregon</option>
+      <option value="PA">Pennsylvania</option>
+      <option value="RI">Rhode Island</option>
+      <option value="SC">South Carolina</option>
+      <option value="SD">South Dakota</option>
+      <option value="TN">Tennessee</option>
+      <option value="TX">Texas</option>
+      <option value="UT">Utah</option>
+      <option value="VT">Vermont</option>
+      <option value="VA">Virginia</option>
+      <option value="WA">Washington</option>
+      <option value="WV">West Virginia</option>
+      <option value="WI">Wisconsin</option>
+      <option value="WY">Wyoming</option>
+    </select>		
+  </div>
+  <div class="col-sm text-center" id="institutionType">
+    <select>
+      <option value="none" selected disabled hidden>Select an Institution Type</option> 
+      <option value="Bar">Bar</option>
+      <option value="Restaurant">Restaurant</option>
+      <option value="Bar&Restaurant">Both</option>
+    </select>	
+  </div>
+  <div class="col-sm text-center" id="vountary_mandated">
+    <select>
+      <option value="none" selected disabled hidden>Recall Type</option> 
+      <option value="Mandated">Mandated</option>
+      <option value="Voluntary">Voluntary</option>
+    </select>	
+  </div>
+  <div class="col-sm text-center" id="recallStatus">
+    <select>
+      <option value="none" selected disabled hidden>Recall Status</option> 
+      <option value="Completed">Completed</option>
+      <option value="Ongoing">Ongoing</option>
+      <option value="Terminated">Terminated</option>
+    </select>	
+  </div>
+  <div class="col-sm text-center" id="recallSubmitButton">
+  <button type="submit" name="submit" value="submit">Check Recalls</button>
+  </div>
+</div>
+<span class="stretch">
+</span>
+</div>
+<div class="container" id="searchResults">
+ General Text for now
+</div>
+
 
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
