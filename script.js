@@ -24,9 +24,15 @@ $("#fdaSearchAll").on("click", function(){
 
 
 });
+
+// Make a Jqery Function to Appened the API search to container ("#stateCriteria")
+       //Makes ajax call to API with state 
 var queryURL = "https://api.fda.gov/food/event.json?search=state.industry_code:2 3&limit=50"
 
+      //within search function set recall type === 
 
+
+      
     var settings = {
 "async": true,
 "crossDomain": true,
