@@ -1,13 +1,31 @@
-var term;
-var queryURL = "https://api.fda.gov/food/event.json?search=products.industry_code:2 3&limit=10"
 
-$.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    });
+
+  
+// Jqery Function to Appened the API search to container. 
+
+$("#fdaSearchAll").on("click", function(){
  
+  $("#searchResults").empty();
+  var queryURL = "https://api.fda.gov/food/event.json?search=products.industry_code:2 3&limit=50"
+  
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    
+    console.log(response);
+     for (var i = 0; i < 10; i++){
+      var brandName = $("<li>").text(response.results[i].products[0].name_brand);
+      $("#searchResults").append(brandName);
+      console.log(response.results[i].products[0].name_brand);
+    }
+  });
+
+
+});
+var queryURL = "https://api.fda.gov/food/event.json?search=state.industry_code:2 3&limit=50"
+
 
     var settings = {
 "async": true,
