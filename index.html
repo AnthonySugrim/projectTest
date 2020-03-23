@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
     </ul>
   </div>
 
-  <div class="jumbotron jumbotronImg vh-100 d-flex flex-column align-items-center justify-content-center">
+  <div class="jumbotron jumbotronImg jumbotronOverlay vh-100 d-flex flex-column align-items-center justify-content-center">
     <h1 class="display-4 headerText">Healthy Eating Practices</h1>
     <h1 class="display-4 headerText">For All</h1>
     <div class="lead jumbotronBtn">
@@ -94,33 +95,6 @@
         </select>
       </div>
     </div>
-    <!-- <div class="col-sm text-center" id="institutionType">
-    
-    <select>
-      <option value="none" selected disabled hidden>Select an Institution Type</option> 
-      <option value="Bar">Bar</option>
-      <option value="Restaurant">Restaurant</option>
-      <option value="Bar&Restaurant">Both</option>
-    </select>	
-  </div>
-  <div class="col-sm text-center" id="vountary_mandated">
-    <select>
-      <option value="none" selected disabled hidden>Recall Type</option> 
-      <option value="Mandated">Mandated</option>
-      <option value="Voluntary">Voluntary</option>
-    </select>	
-  </div>
-  <div class="col-sm text-center" id="recallStatus">
-    <select>
-      <option value="none" selected disabled hidden>Recall Status</option> 
-      <option value="Completed">Completed</option>
-      <option value="Ongoing">Ongoing</option>
-      <option value="Terminated">Terminated</option>
-    </select>	
-  </div>
-  <div class="col-sm text-center" id="recallSubmitButton">
-  <button type="submit" name="submit" value="submit">Check Recalls</button>
-  </div> -->
 
     <span class="stretch">
     </span>
@@ -132,10 +106,15 @@
 
   </div>
 
-
+  
+  <!-- HTML Code for Table-->
+  <table class=" display GeneratedTable" id="generatedRecallResults" width="100%">
+  </table>
+  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 </body>
 
 </html>
