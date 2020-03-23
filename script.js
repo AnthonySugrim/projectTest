@@ -49,9 +49,9 @@ $("#stateCriteria").on("change", function (e) {
 
 });
 
-//within search function set recall type === 
 
-
+// $("#symptomSearchEnter").on("click", function () {}); 
+ 
 var settings = {
 	"async": true,
 	"crossDomain": true,
@@ -59,38 +59,59 @@ var settings = {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "priaid-symptom-checker-v1.p.rapidapi.com",
-		"x-rapidapi-key": "c351c03a0cmsh2f8864383801a38p17eb4fjsn251da310b5fb"
+    "x-rapidapi-key": "c351c03a0cmsh2f8864383801a38p17eb4fjsn251da310b5fb"
+    
 	}
 };
 
+// Get issue ID from user's search 
+$.ajax(settings).done(function (response) {
+console.log(response);
+ // var issuesId = response[i].ID;
+ // console.log(issuesId);
+ $('#allSymptomsId').DataTable({
+  data: response,
+  columns: [{"data": "ID"}, {"data": "Name"}]
+});
+
+
+});
+
+// then send ID to the API 
+$("#patientSearchEntry").keypress(function(event){
+
+  if(event.which == 13){
+    var issuesId = $("#patientSearchEntry").val();
+    console.log(issuesId);
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://priaid-symptom-checker-v1.p.rapidapi.com/issues/" + issuesId +"/info?language=en-gb",
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-host": "priaid-symptom-checker-v1.p.rapidapi.com",
+    "x-rapidapi-key": "c351c03a0cmsh2f8864383801a38p17eb4fjsn251da310b5fb"
+  }
+}
+
+// Within api create the responses Name, Symptoms, Treatments 
+
 $.ajax(settings).done(function (response) {
   console.log(response);
-for(var i = 0; i < response.length; i++){
 
-  var issuesId = response[i].ID;
-  console.log(issuesId);
-  var issuesName = response[i].Name;
-  console.log(issuesName);
-}
-
+ 
+  var symptoms = $("#symptoms").append(response.Name);
+  var description = $("#description").append(response.DescriptionShort);
+  var diagnoses = $("#diagnoses").append(response.PossibleSymptoms);
+  var treatment = $("#treatment").append(response.TreatmentDescription);
+  
 });
 
+  }
+})
 
 
-// then 
 
 
-var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://priaid-symptom-checker-v1.p.rapidapi.com/issues/" + issuesId +" /info?language=en-gb",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "priaid-symptom-checker-v1.p.rapidapi.com",
-		"x-rapidapi-key": "c351c03a0cmsh2f8864383801a38p17eb4fjsn251da310b5fb"
-	}
-}
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+

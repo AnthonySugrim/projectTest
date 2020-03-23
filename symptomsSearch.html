@@ -28,6 +28,18 @@
       </li>
     </ul>
   </div>
+
+
+<div id="symptomsResults">
+      <ul>
+        <li id="symptoms">Symptoms:   </li>
+        <li id="description">Description:   </li>
+        <li id="diagnoses">Diagnoses:   </li>
+        <li id="treatment">Treatment:   </li>     
+      </ul>
+</div>
+
+
 <div class="container">
   <div class="row py-5">
     <div class="col-lg-9 mx-auto text-white text-center">
@@ -35,6 +47,7 @@
       <p class="lead mb-0">Check what ails you.</p>
     </div>
   </div>
+
 
 
   <div class="row mb-5">
@@ -45,15 +58,45 @@
         <form action="">
           <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
             <div class="input-group">
-              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              <input id="patientSearchEntry" type="text" placeholder="Enter ID" class="form-control border-0 bg-light" >
               <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                
               </div>
             </div>
           </div>
+
+         
+      
+          
+            
+          
+          <table class="display GeneratedTable" id="allSymptomsId" width="100%">
+          <thead>
+            <tr>
+                <th>ID</th>
+                <th>Symptoms</th>                
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+                  <tr>
+                    <th>ID</th>
+                    <th>Symptoms</th>
+
+                  </tr>
+              </tfoot>
+        </table> 
+        
+      
+         
+          
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="script.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+
+
     
     </body>
 
