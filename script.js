@@ -13,7 +13,7 @@ $("#fdaSearchAll").on("click", function () {
       console.log('DATA', response.results);
       $('#generatedRecallResults').DataTable({
         data: response.results,
-        columns: [{"data": "city"}, {"data": "reason_for_recall"}, {"data": "status"}]
+        columns: [{"data": "recalling_firm"}, {"data": "reason_for_recall"}, {"data": "status"}]
       });
   });
 });
@@ -98,8 +98,6 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
   console.log(response);
-
- 
   var symptoms = $("#symptoms").append(response.Name);
   var description = $("#description").append(response.DescriptionShort);
   var diagnoses = $("#diagnoses").append(response.PossibleSymptoms);
@@ -108,7 +106,7 @@ $.ajax(settings).done(function (response) {
 });
 
   }
-})
+});
 
 
 
